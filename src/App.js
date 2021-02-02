@@ -17,7 +17,7 @@ function App() {
     const getItems = async () => {
       const items = await (
         await fetch(
-          `http://ddragon.leagueoflegends.com/cdn/11.2.1/data/en_US/item.json`
+          `https://ddragon.leagueoflegends.com/cdn/11.2.1/data/en_US/item.json`
         )
       ).json();
       setShopList(items.data);
