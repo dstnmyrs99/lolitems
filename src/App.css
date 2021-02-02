@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+.shopContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+img{
+  width: 65px;
+}
+.item{
+  margin: 30px;
+}
+.header{
+  margin: auto;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.from img{
+  margin: 0 5px;
+  width: 15px;
+}
+
+.from{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+.App div div p {
+  margin: 10px auto 0;
+}

@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
+import { useEffect, useState } from "react";
+import "./App.css";
+import Shop from "./Shop";
+import Item from "./Item";
+import Header from './Header';
 
 function App() {
+  const [shopList, setShopList] = useState({});
+
+  useEffect(() => {
+    const getItems = async () => {
+      const items = await (
+        await fetch(
+          `http://ddragon.leagueoflegends.com/cdn/11.2.1/data/en_US/item.json`
+        )
+      ).json();
+      setShopList(items.data);
+    };
+    getItems();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" exact={true}>
+            <Shop shopList={shopList} />
+          </Route>
+          <Route path="/item/:id">
+            <Item list={shopList} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
