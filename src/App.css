@@ -68,3 +68,6 @@ img{
 .App div div p {
   margin: 10px auto 0;
 }
+select{
+  margin: 25px;
+}

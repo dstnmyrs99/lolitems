@@ -5,7 +5,6 @@ import FromItem from "./FromItem";
 function Item({ list }) {
   const params = useParams();
   const { id } = params;
-  console.log(list[id]);
   if (Object.keys(list).length) {
     return (
       <div className="App">
