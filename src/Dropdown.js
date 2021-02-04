@@ -8,6 +8,8 @@ function Dropdown({toFilter, setToFilter}) {
         history.push(`/${event.target.value}`)
     }
       return (
+        <>
+        <label htmlFor="tags">Filter:</label>
         <select name="tags" id="tags" value={toFilter} onChange={changeHandler}>
             <option value="">All</option>
             <option value="Boots">Boots</option>
@@ -39,8 +41,8 @@ function Dropdown({toFilter, setToFilter}) {
             <option value="Slow">Slow</option>
             <option value="ArmorPenetration">Armor Penetration</option>
             <option value="Trinket">Trinket</option>
-
         </select>
+        </>
       );
   }
   export default Dropdown;

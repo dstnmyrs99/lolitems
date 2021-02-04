@@ -1,19 +1,23 @@
-import { useHistory } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
 
-function Header() {
+function Header({ toSearch }) {
+ 
   const history = useHistory();
+  const { url } = useRouteMatch();
+  const handleBack = ()=>{
+    
+    console.log(url);
+    history.go(-(toSearch.length ? toSearch.length : 1));
+  }
   return (
     <div className="header">
       <button
-        onClick={() => {
-          history.goBack();
-        }}
+        onClick={handleBack}
       >
         Back
       </button>
-      
-        <button onClick={()=> history.push('/')}>Home</button>
- 
+
+      <button onClick={() => history.push("/")}>Home</button>
     </div>
   );
 }

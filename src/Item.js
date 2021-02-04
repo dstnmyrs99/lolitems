@@ -2,7 +2,11 @@ import { useParams } from "react-router-dom";
 import IntoItem from "./IntoItem";
 import FromItem from "./FromItem";
 
-function Item({ list }) {
+function Item({ list, setToSearch }) {
+  setTimeout(()=>{
+    setToSearch('');
+  },300)
+  
   const params = useParams();
   const { id } = params;
   if (Object.keys(list).length) {
