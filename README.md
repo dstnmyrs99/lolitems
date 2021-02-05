@@ -1,4 +1,5 @@
 # League of Legends Items  
+Made with React and React-Router
     
 [Check-it-out](https://lolitems.netlify.app/)  
   
