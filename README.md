@@ -1,7 +1,7 @@
 # League of Legends Items  
 Made with React and React-Router
     
-[Check-it-out](https://lolitems.netlify.app/)  
+[Check-it-out](https://lol-shop.netlify.app/)  
   
   
   Lists all LoL items      
