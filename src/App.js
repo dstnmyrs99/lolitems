@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./App.css";
-import Shop from "./Shop";
-import Item from "./Item";
+import Shop from "./components/Shop";
+import Item from "./components/Item";
 import Header from "./Header";
 
 function App() {
